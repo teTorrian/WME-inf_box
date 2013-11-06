@@ -21,3 +21,27 @@ h1 {
    margin-bottom: 0px;
    margin-left: auto;
 }
+
+#logo { 
+	width: 150px; 
+	height: 80px; 
+	overflow: hidden;  
+}
+
+table {
+	width: 100%;
+}
+
+thead {
+	text-align: left;
+}
+
+td {
+	vertical-align: top;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+a:hover {
+	
+}
