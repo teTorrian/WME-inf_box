@@ -1,0 +1,171 @@
+
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 145%;
+}
+
+h1 {
+	font-family: 'Ubuntu Condensed', sans-serif;
+	font-size: 3em;
+	font-weight: 300;
+	line-height: 140%;
+}
+
+#wrapper {
+   width: 1170px;
+   margin-top: 0px;
+   margin-right: auto;
+   margin-bottom: 0px;
+   margin-left: auto;
+}
+
+#logo { 
+	width: 150px;
+	height: 80px;
+	overflow: hidden;
+	float: left;
+	padding-right: 55px;
+}
+
+table {
+	margin-top: 15px;
+	width: 100%;
+}
+
+thead {
+	text-align: left;
+}
+
+td {
+	vertical-align: top;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+a {
+	
+	text-decoration:none;
+}
+
+#user_nav_header {
+	float: right;
+	
+	border-left-width:1px;
+	border-left-style:solid;
+	border-left-color:#cccccc;
+	
+}
+
+#system_nav_header {
+	float: left;
+	
+	border-left-width:1px;
+	border-left-style:solid;
+	border-left-color:#cccccc;
+}
+
+#nav_header {
+	height: 80px;
+	display: block;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #D0D0D0),
+		color-stop(1, #EFEFEF)
+	);
+	background-image: -o-linear-gradient(bottom, #D0D0D0 0%, #EFEFEF 100%);
+	background-image: -moz-linear-gradient(bottom, #D0D0D0 0%, #EFEFEF 100%);
+	background-image: -webkit-linear-gradient(bottom, #D0D0D0 0%, #EFEFEF 100%);
+	background-image: -ms-linear-gradient(bottom, #D0D0D0 0%, #EFEFEF 100%);
+	background-image: linear-gradient(to bottom, #D0D0D0 0%, #EFEFEF 100%);
+	
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#CCCCCC;
+}
+
+#nav_header nav ul li {
+	float: left;	
+}
+
+#nav_header nav ul li a {
+	display: block;
+	
+	padding-top: 35px;
+	padding-bottom: 25px;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+	border-right-width:1px;
+	border-right-style:solid;
+	border-right-color:#cccccc;
+	
+	color:#666666;
+}
+
+#nav_header nav ul li a:hover {
+	color: #1a1a1a;
+	background-color: #cccccc;
+}
+
+#nav_header nav #active_tab {
+	color: #ffffff;
+	background-color: #666666;
+}
+
+#contentTable {
+	margin-top: 42px;
+}
+
+#contentTable h1 {
+	margin-bottom: 20px;
+}
+
+#contentTable .fa {
+	color: #68c519;
+}
+
+#contentTable .fa:hover {
+	color: #3d7d02;
+}
+
+#contentTable header {
+	//display: block;
+}
+
+.textline * {
+	display: inline;	
+}
+
+.textline p {
+	color: #999999;
+}
+
+.textline a {
+	text-decoration: underline;
+	color: #68c519;
+}
+
+.textline a[class = active] {
+	color: #cccccc;
+}
+
+.numberOfEntries , .showHide {
+	float: left;
+	margin-right: 28px;
+}
+
+.pages {
+	float: right;
+}
+
+#tab {
+	display: block;
+}
+
+// suckerfish dropdown
