@@ -17,14 +17,17 @@ h1 {
 	width: 100%;
 }
 
-thead {
+#contentTable thead {
 	text-align: left;
-	
-	padding-bottom: 12px;
-	
+
 	border-bottom-width: 3px;
 	border-bottom-style: solid;
 	border-bottom-color: #cccccc;
+}
+
+#contentTable thead > div {
+	
+	margin-bottom: 12px;
 }
 
 #contentTable tbody > tr {
@@ -37,10 +40,6 @@ thead {
 	vertical-align: top;
 	padding-top: 13px;
 	padding-bottom: 10px;
-}
-
-a {
-	text-decoration:none;
 }
 
 article {
@@ -58,9 +57,16 @@ article {
 #logo { 
 	width: 150px;
 	height: 80px;
-	overflow: hidden;
+	display: block;
+	//overflow: hidden;
 	float: left;
+	background-image: url(../pictures/infbox_logo.png);
+	background-repeat: no-repeat;
 	padding-right: 55px;
+}
+
+#logo:hover {
+	background-position: 0px -80px;
 }
 
 #user_nav_header {
@@ -137,32 +143,34 @@ article {
 #nav_header nav ul li a {
 	display: block;
 	
+	text-decoration: none;
+	
 	padding-top: 35px;
 	padding-bottom: 25px;
 	padding-left: 15px;
 	padding-right: 15px;
 	
-	border-right-width:1px;
-	border-right-style:solid;
-	border-right-color:#cccccc;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #cccccc;
 	
-	color:#666666;
+	color: #666666;
 	background-color: rgba(204, 204, 204, 0.0);
 	
 	transition-property: color;
-	transition-duration: 0.5s;
+	transition-duration: 0.4s;
 	transition-timing-function: linear;
 	/* Safari */
 	-webkit-transition-property: color;
-	-webkit-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.4s;
 	-webkit-transition-timing-function: linear;
 	
 	transition-property: background-color;
-	transition-duration: 0.5s;
+	transition-duration: 0.4s;
 	transition-timing-function: linear;
 	/* Safari */
 	-webkit-transition-property: background-color;
-	-webkit-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.4s;
 	-webkit-transition-timing-function: linear;
 }
 
@@ -189,9 +197,12 @@ article {
 	margin-bottom: 20px;
 }
 
+#contentTable table a {
+	text-decoration: none;
+}
+
 #contentTable .fa {
 	color: #68c519;
-	text-decoration: none;
 	
 	margin-left: 5px;
 	margin-right: 2px;
@@ -205,6 +216,10 @@ article {
 	//display: block;
 }
 
+#contentTable img {
+	margin-right: 12px;
+}
+
 .textline * {
 	display: inline;	
 }
@@ -214,7 +229,6 @@ article {
 }
 
 .textline a {
-	text-decoration: underline;
 	color: #68c519;
 }
 
@@ -227,12 +241,19 @@ article {
 	margin-right: 28px;
 }
 
-/*.pages {
-	float: right;
-}*/
-
-#tab {
-	display: block;
+.pages {
+	text-align: right;
 }
 
-// suckerfish dropdown
+#pageFooter {
+	margin-top: 12px;
+	margin-bottom: 50px;
+}
+
+#pageFooter > table {
+	width: 100%;
+}
+
+#pageFooter .tableLast {
+	text-align: right;
+}
