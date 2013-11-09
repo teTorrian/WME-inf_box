@@ -19,15 +19,14 @@ h1 {
 
 #contentTable thead {
 	text-align: left;
-
-	border-bottom-width: 3px;
-	border-bottom-style: solid;
-	border-bottom-color: #cccccc;
+	line-height: 40px;
+	padding-bottom: 12px;
 }
 
-#contentTable thead > div {
-	
-	margin-bottom: 12px;
+#contentTable tbody {
+	border-top-width: 3px;
+	border-top-style: solid;
+	border-top-color: #cccccc;
 }
 
 #contentTable tbody > tr {
