@@ -78,30 +78,6 @@ article {
 	border-left-color:#cccccc;
 }
 
-/*
-#user_nav_header .submenu {
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	top: 120px;
-	margin: 0;
-	padding: 0;
-	z-index: -1;
-}
-*/
-
-/*
-#user_nav_header a:hover .submenu {
-  opacity: 1;
-  visibility: visible;
-  margin: 0;
-  color: #000;
-  z-index: 2;
-  top: 64px;
-  left: 0;
-}
-*/
-
 #system_nav_header {
 	float: left;
 	
@@ -132,13 +108,6 @@ article {
 	border-bottom-color: #CCCCCC;
 }
 
-/*
-#nav_header nav ul li {
-	float: left;	
-}
-*/
-
-
 #nav_header nav ul li a {
 	display: block;
 	
@@ -155,20 +124,20 @@ article {
 	
 	color: #666666;
 	background-color: rgba(204, 204, 204, 0.0);
+
 	
 	transition-property: color;
 	transition-duration: 0.4s;
 	transition-timing-function: linear;
-	
-	
+
 	-webkit-transition-property: color;
 	-webkit-transition-duration: 0.4s;
 	-webkit-transition-timing-function: linear;
+
 	
 	transition-property: background-color;
 	transition-duration: 0.4s;
 	transition-timing-function: linear;
-	
 
 	-webkit-transition-property: background-color;
 	-webkit-transition-duration: 0.4s;
@@ -187,7 +156,6 @@ article {
 	color: #ffffff;
 	background-color: #666666;
 }
-
 
 
 #contentTable {
@@ -216,10 +184,6 @@ article {
 
 #contentTable .fa:hover {
 	color: #3d7d02;
-}
-
-#contentTable header {
-	//display: block;
 }
 
 #contentTable img {
@@ -264,19 +228,9 @@ article {
 	text-align: right;
 }
 
-/* Dropdown-Start */
+/* Dropdown */
 
-/*
-nav {
-    width: 960px;
-}
-nav ul {
-    padding: 0px;
-    margin: 0px;
-}
-*/
-
-nav ul:after {
+.submenu:after {
     clear: both;
     content: " ";
     display: block;
@@ -285,41 +239,31 @@ nav ul:after {
     visibility: hidden;
 }
 
-
-nav ul,nav ul li{
-    background-color: #FAFAFA;
+.submenu {
+    background-color: #fcfcfc;
 }
 
-
-nav ul li {
+nav > ul > li {
     list-style: none;
     float: left;
 }
 
-nav ul li a {
+nav > ul > li > a {
     text-decoration: none;
     display: block;
     color: #333;
     padding: 14px 34px 14px 34px;
 }
 
-nav ul li:hover > ul {
+#user_nav_header > li:hover > .submenu {
     visibility: visible;
 }
 
-nav ul li ul{
+#user_nav_header > li > .submenu{
     display: inline;
     visibility: hidden;
     position: absolute;
     padding:0px;
-}
-
-nav ul li ul li{
-    float: none;
-}
-
-nav ul li ul li a:hover{
-    color: #333;
 }
 
 
