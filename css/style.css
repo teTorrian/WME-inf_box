@@ -289,7 +289,7 @@ nav ul li table{
 
 
 .input {
-	width: 100%;
+	width: 200px;
 	height: 25px;
 	background: #fafafa;
 	border: 1px solid grey;
@@ -304,11 +304,9 @@ nav ul li table{
 	background: #fafafa;
 }
 
-#regButton {
+.atButton {
 	text-align: right;
 }
-
-
 
 
 /* Navigation-Button */
