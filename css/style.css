@@ -243,29 +243,26 @@ article {
 nav > ul > li {
     list-style: none;
     float: left;
-}
-
-nav > ul > li > a {
-    text-decoration: none;
-    display: block;
-    color: #333;
-    padding: 14px 34px 14px 34px;
+	
+	direction: rtl;
 }
 
 
 nav ul li:hover > table {
     visibility: visible;
+
+	
 }
 
 nav ul li table{
-    display: inline;
+    /*display: inline;*/
     visibility: hidden;
     position: absolute;
-    padding:0px;
 }
 
 
 .submenu {
+	direction: ltr;
 	background: #fcfcfc;
 	border-left: 1px solid #cccccc;
 	border-right: 1px solid #cccccc;
