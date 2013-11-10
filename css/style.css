@@ -303,17 +303,18 @@ nav ul li a {
     padding: 14px 34px 14px 34px;
 }
 
-nav ul li:hover > ul {
+nav ul li:hover > table {
     visibility: visible;
 }
 
-nav ul li ul{
+nav ul li table{
     display: inline;
     visibility: hidden;
     position: absolute;
     padding:0px;
 }
 
+/*
 nav ul li ul li{
     float: none;
 }
@@ -321,6 +322,51 @@ nav ul li ul li{
 nav ul li ul li a:hover{
     color: #333;
 }
+*/
+
+.submenu {
+	background: #fcfcfc;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	border-top: 2px solid #7bea29;
+	padding: 10px;
+	border-collapse: separate;
+	border-spacing: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-box-shadow: 0px 1px 1px 0px #cccccc;
+	-webkit-box-shadow: 0px 1px 1px 0px #cccccc;
+	box-shadow: 0px 1px 1px 0px #cccccc;	
+}
+
+
+.formTitle {
+	font-size: 10pt;
+	color: #cccccc;
+}
+
+
+.input {
+	width: 100%;
+	height: 20px;
+	background: #fafafa;
+	border: 1px solid grey;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+#checkRemember {
+	border: 1px solid grey;
+	background: #fafafa;
+}
+
+#regButton {
+	text-align: right;
+}
+
 
 
 /* Navigation-Button */
@@ -332,28 +378,28 @@ nav ul li ul li a:hover{
 	background:-moz-linear-gradient( center top, #74db1b 5%, #69c519 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74db1b', endColorstr='#69c519');
 	background-color:#74db1b;
-	-webkit-border-top-left-radius:6px;
-	-moz-border-radius-topleft:6px;
-	border-top-left-radius:6px;
-	-webkit-border-top-right-radius:6px;
-	-moz-border-radius-topright:6px;
-	border-top-right-radius:6px;
-	-webkit-border-bottom-right-radius:6px;
-	-moz-border-radius-bottomright:6px;
-	border-bottom-right-radius:6px;
-	-webkit-border-bottom-left-radius:6px;
-	-moz-border-radius-bottomleft:6px;
-	border-bottom-left-radius:6px;
+	-webkit-border-top-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	border-top-left-radius:3px;
+	-webkit-border-top-right-radius:3px;
+	-moz-border-radius-topright:3px;
+	border-top-right-radius:3px;
+	-webkit-border-bottom-right-radius:3px;
+	-moz-border-radius-bottomright:3px;
+	border-bottom-right-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-bottom-left-radius:3px;
 	text-indent:0;
 	border:1px solid #69c519;
 	display:inline-block;
 	color:#f5f5f5;
 	font-family: 'Ubuntu', sans-serif;
-	font-size:15px;
+	font-size:14px;
 	font-weight:bold;
 	font-style:normal;
-	height:40px;
-	line-height:50px;
+	height:35px;
+	line-height:35px;
 	width:70;
 	text-decoration:none;
 	text-align:center;
@@ -368,4 +414,6 @@ nav ul li ul li a:hover{
 	position:relative;
 	top:1px;
 }
+
+
 

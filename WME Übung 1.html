@@ -34,46 +34,71 @@
 				<ul id="user_nav_header">
 					<li>
 						<a href="#"><i class="fa fa-star fa-lg"></i>  Register</a>
-						<ul class="submenu">
+						<table class="submenu">
 							<form name="input" action="" method="get">
-								<p>First name</p>
-								<input type="text" name="firstName">
-								<p>Last name</p>
-								<input type="text" name="lastName">
-								<p>Birthday</p>
-								<input type="date" name="birthday">
-								<p>Your username</p>
-								<input type="text" name="username">
-								<p>Your password</p>
-								<input type="text" name="password"><br/>
-								<input class="navbutton" type="submit" value="Register" align="right">
+								<tr><td>
+									<p class="formTitle">First name</p>
+									<input class="input" type="text" name="firstName">
+								</td></tr>
+								<tr><td>
+									<p class="formTitle">Last name</p>
+									<input class="input" type="text" name="lastName">
+								</td></tr>
+								<tr><td>
+									<p class="formTitle">Birthday</p>
+									<input class="input" type="date" name="birthday">
+								</td></tr>
+								<tr><td>
+									<p class="formTitle">Your username</p>
+									<input class="input" type="text" name="username">
+								</td></tr>
+								<tr><td>
+									<p class="formTitle">Your password</p>
+									<input class="input" type="text" name="password"><br/>
+								</td></tr>
+								<tr id="regButton"><td>
+									<input class="navbutton" type="submit" value="Register">
+								</td></tr>
 							</form>
-						</ul>
+						</table>
 					</li>
 					<li>
 						<a href="#"><i class="fa fa-sign-in fa-lg"></i>  Login</a>
-						<ul class="submenu">
+						<table class="submenu" id="secondTab">
 							<form name="input" action="" method="get">
-								<p>Username</p>
-								<input type="text" name="firstName">
-								<p>Password</p>
-								<input type="text" name="lastName">
-								<p><input type="checkbox" name="remember" value="remember">remember me
-								<input class="navbutton" type="submit" value="Login"></p>
+								<tr>
+									<td colspan="2">
+										<p class="formTitle">Username</p>
+										<input class="input" type="text" name="firstName">
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<p class="formTitle">Password</p>
+										<input class="input" type="text" name="lastName">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<p class="formTitle"><input id="checkRemember" type="checkbox" name="remember" value="remember">remember me</p>
+									</td>
+									<td>
+										<input class="navbutton" type="submit" value="Login">
+									</td>
+								</tr>
 							</form>
-						</ul>
+						</table>
 					</li>
 					<li>
 						<a href="#"><i class="fa fa-user fa-lg"></i>  maxmusti</a>
-						<ul class="submenu">
-							<table name="showData">
-								<tr><td>Your name:<br/>Jane Doe</td></tr>
-								<tr><td>Your Email:<br/>jane.doe@example.org</td></tr>
-								<tr><td>Your Quota (max/used):<br/>2.5 GB / 7.0 GB</td></tr>
-								<tr><td> </td></tr>							
-							</table>
+						<table class="submenu" name="showData">
 							
-						</ul>
+								<tr><td><p class="formTitle">Your name:</p>Jane Doe</td></tr>
+								<tr><td><p class="formTitle">Your Email:<p/>jane.doe@example.org</td></tr>
+								<tr><td><p class="formTitle">Your Quota (max/used):<p/>2.5 GB / 7.0 GB</td></tr>
+								<tr><td> </td></tr>							
+							
+						</table>
 					</li>
 				</ul>
 			</nav>
