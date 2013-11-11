@@ -34,70 +34,77 @@
 				<ul id="user_nav_header">
 					<li>
 						<a href="#"><i class="fa fa-star fa-lg"></i>  Register</a>
-						<table class="submenu">
-							<form name="input" action="" method="get">
-								<tr><td>
-									<p class="formTitle">First name</p>
-									<input class="input" type="text" name="firstName">
-								</td></tr>
-								<tr><td>
-									<p class="formTitle">Last name</p>
-									<input class="input" type="text" name="lastName">
-								</td></tr>
-								<tr><td>
-									<p class="formTitle">Birthday</p>
-									<input class="input" type="date" name="birthday">
-								</td></tr>
-								<tr><td>
-									<p class="formTitle">Your username</p>
-									<input class="input" type="text" name="username">
-								</td></tr>
-								<tr><td>
-									<p class="formTitle">Your password</p>
-									<input class="input" type="text" name="password"><br/>
-								</td></tr>
-								<tr class="atButton"><td>
-									<input class="navbutton" type="submit" value="Register">
-								</td></tr>
+						<div class="submenu">
+							<form  name="input" action="#" method="get">
+								<table>
+									<tr><td>
+										<p class="formTitle">First name</p>
+										<input class="input" type="text" name="firstName">
+									</td></tr>
+									<tr><td>
+										<p class="formTitle">Last name</p>
+										<input class="input" type="text" name="lastName">
+									</td></tr>
+									<tr><td>
+										<p class="formTitle">Birthday</p>
+										<input class="input" type="date" name="birthday">
+									</td></tr>
+									<tr><td>
+										<p class="formTitle">Your username</p>
+										<input class="input" type="text" name="username">
+									</td></tr>
+									<tr><td>
+										<p class="formTitle">Your password</p>
+										<input class="input" type="text" name="password"><br/>
+									</td></tr>
+									<tr class="atButton"><td>
+										<input class="submitButton" type="submit" value="Register">
+									</td></tr>
+								</table>
 							</form>
-						</table>
+						</div>
 					</li>
 					<li>
 						<a href="#"><i class="fa fa-sign-in fa-lg"></i>  Login</a>
-						<table class="submenu" id="secondTab">
-							<form name="input" action="" method="get">
-								<tr>
-									<td colspan="2">
-										<p class="formTitle">Username</p>
-										<input class="input" type="text" name="firstName">
-									</td>
-								</tr>
-								<tr>
-									<td colspan="2">
-										<p class="formTitle">Password</p>
-										<input class="input" type="text" name="lastName">
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<p class="formTitle"><input id="checkRemember" type="checkbox" name="remember" value="remember">remember me</p>
-									</td>
-									<td class="atButton">
-										<input class="navbutton" type="submit" value="Login">
-									</td>
-								</tr>
+						<div class="submenu">
+							<form name="input" action="#" method="get">
+								<table  id="secondTab">
+									<tr>
+										<td colspan="2">
+											<p class="formTitle">Username</p>
+											<input class="input" type="text" name="firstName">
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<p class="formTitle">Password</p>
+											<input class="input" type="text" name="lastName">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<p class="formTitle"><input id="checkRemember" type="checkbox" name="remember" value="remember">remember me</p>
+										</td>
+										<td class="atButton">
+											<input class="submitButton" type="submit" value="Login">
+										</td>
+									</tr>
+								</table>
 							</form>
-						</table>
+						</div>
 					</li>
 					<li>
 						<a href="#"><i class="fa fa-user fa-lg"></i>  maxmusti</a>
-						<table class="submenu" name="showData">
-							
+						<div class="submenu">
+							<table class="showData">
 								<tr><td><p class="formTitle">Your name:</p>Jane Doe</td></tr>
-								<tr><td><p class="formTitle">Your Email:<p/>jane.doe@example.org</td></tr>
-								<tr><td><p class="formTitle">Your Quota (max/used):<p/>2.5 GB / 7.0 GB</td></tr>
-								
-						</table>
+								<tr><td><p class="formTitle">Your Email:</p>jane.doe@example.org</td></tr>
+								<tr><td><p class="formTitle">Your Quota (max/used):</p>2.5 GB / 7.0 GB</td></tr>
+								<tr><td class="atButton">
+									<input class="submitButton" type="submit" value="Logout">
+								</td></tr>									
+							</table>
+						</div>
 					</li>
 				</ul>
 			</nav>
@@ -158,7 +165,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -172,7 +179,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -189,7 +196,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -206,7 +213,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -223,7 +230,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -240,7 +247,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -254,7 +261,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -271,7 +278,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -285,7 +292,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
@@ -299,7 +306,7 @@
 									<a href="#"><i class="fa fa-eye fa-lg"></i></a>
 									<a href="#"><i class="fa fa-share fa-lg"></i></a>
 									<p>|</p>
-									<a href="#"><i href="#" class="fa fa-pencil fa-lg"></i></a>
+									<a href="#"><i class="fa fa-pencil fa-lg"></i></a>
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>

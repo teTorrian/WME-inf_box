@@ -1,14 +1,13 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 14px;
-	//font-weight: 400;
+	font-weight: 400;
 	line-height: 145%;
 }
 
 h1 {
 	font-family: 'Ubuntu Condensed', sans-serif;
 	font-size: 3em;
-	//font-weight: 400;
 	line-height: 140%;
 }
 
@@ -53,11 +52,10 @@ article {
    margin-left: auto;
 }
 
-#logo { 
+#logo {
 	width: 150px;
 	height: 80px;
 	display: block;
-	//overflow: hidden;
 	float: left;
 	background-image: url(../pictures/infbox_logo.png);
 	background-repeat: no-repeat;
@@ -72,6 +70,7 @@ article {
 
 #user_nav_header {
 	float: right;
+	direction: ltr;
 	
 	border-left-width:1px;
 	border-left-style:solid;
@@ -80,6 +79,7 @@ article {
 
 #system_nav_header {
 	float: left;
+	direction: ltr;
 	
 	border-left-width:1px;
 	border-left-style:solid;
@@ -247,14 +247,15 @@ nav > ul > li {
 	direction: rtl;
 }
 
-
-nav ul li:hover > table {
-    visibility: visible;
-
-	
+nav > ul > li > a {
+	direction: ltr;
 }
 
-nav ul li table{
+nav ul li:hover > div {
+    visibility: visible;	
+}
+
+nav ul li div{
     /*display: inline;*/
     visibility: hidden;
     position: absolute;
@@ -303,18 +304,29 @@ nav ul li table{
 
 .atButton {
 	text-align: right;
+	margin-top: 10px;
 }
 
 
-/* Navigation-Button */
-.navbutton{
+/* Submit-Button */
+.submitButton{
+	margin-top: 15px;
 	-moz-box-shadow: 0px 0px 1px 0px #545454;
 	-webkit-box-shadow: 0px 0px 1px 0px #545454;
 	box-shadow: 0px 0px 1px 0px #545454;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #74db1b), color-stop(1, #69c519) );
-	background:-moz-linear-gradient( center top, #74db1b 5%, #69c519 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#74db1b', endColorstr='#69c519');
-	background-color:#74db1b;
+	
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #74db1b),
+		color-stop(1, #69c519));
+	background-image: -o-linear-gradient(bottom, #74db1b 0%, #69c519 100% );
+	background-image: -moz-linear-gradient(bottom, #74db1b 0%, #69c519 100% );
+	background-image: -webkit-linear-gradient(bottom, #74db1b 0%, #69c519 100% );
+	background-image: -ms-linear-gradient(bottom, #74db1b 0%, #69c519 100% );
+	background-image: linear-gradient(to bottom, #74db1b 0%, #69c519 100% );
+
 	-webkit-border-top-left-radius:3px;
 	-moz-border-radius-topleft:3px;
 	border-top-left-radius:3px;
@@ -337,17 +349,25 @@ nav ul li table{
 	font-style:normal;
 	height:35px;
 	line-height:35px;
-	width:70;
+	width:70px;
 	text-decoration:none;
 	text-align:center;
 }
-.navbutton:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #69c519), color-stop(1, #74db1b) );
-	background:-moz-linear-gradient( center top, #69c519 5%, #74db1b 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#69c519', endColorstr='#74db1b');
-	background-color:#69c519;
+.submitButton:hover {
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(1, #69c519),
+		color-stop(0, #74db1b));
+	background-image: -o-linear-gradient(bottom, #69c519 0%, #74db1b 100% );
+	background-image: -moz-linear-gradient(bottom, #69c519 0%, #74db1b 100% );
+	background-image: -webkit-linear-gradient(bottom, #69c519 0%, #74db1b 100% );
+	background-image: -ms-linear-gradient(bottom, #69c519 0%, #74db1b 100% );
+	background-image: linear-gradient(to bottom, #69c519 0%, #74db1b 100% );
+}
 
-}.navbutton:active {
+.submitButton:active {
 	position:relative;
 	top:1px;
 }
