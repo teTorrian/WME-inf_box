@@ -3,18 +3,18 @@
 
 	$(window).scroll(function() {
 		 
-		if($(window).scrollTop() > 40) {
+		if($(window).scrollTop() >= 60) {
 			
-			$('.sticky_nav').slideDown('slow');
-			$('.sticky_nav').addClass('sticky');
+			$(".sticky_nav").slideDown("slow");
+			$(".sticky_nav").addClass("sticky");
 
 		}else {
 
-			$('.sticky_nav').slideUp('slow');
-			$('.sticky_nav').removeClass('sticky');
+			$(".sticky_nav").slideUp("slow");
+			/*$(".sticky_nav").removeClass("sticky");*/
 
 		}
-	});		
+	});
 
 });
 
