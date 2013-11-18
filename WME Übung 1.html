@@ -44,27 +44,27 @@
 					<li>
 						<a href="#"><i class="fa fa-star fa-lg"></i>  Register</a>
 						<div class="submenu">
-							<form  name="input" action="#" method="get" onsubmit="formcheck()">
+							<form  name="register" action="#" method="get" onsubmit="formcheck()">
 								<table>
 									<tr><td>
-										<p class="formTitle">First name<span class="needed">*</span></p>
+										<p class="formTitle" id="fname">First name</span></p>
 										<input class="input" type="text" name="firstName">
 									</td></tr>
 									<tr><td>
-										<p class="formTitle">Last name<span class="needed">*</span></p>
+										<p class="formTitle" id="name">Last name</p>
 										<input class="input" type="text" name="lastName">
 									</td></tr>
 									<tr><td>
-										<p class="formTitle">Birthday<span class="needed">*</span></p>
+										<p class="formTitle" id="bday">Birthday</p>
 										<input class="input" type="date" name="birthday">
 									</td></tr>
 									<tr><td>
-										<p class="formTitle">Your username<span class="needed">*</span></p>
+										<p class="formTitle" id="uname">Your username</p>
 										<input class="input" type="text" name="username">
 									</td></tr>
 									<tr><td>
-										<p class="formTitle">Your password<span class="needed">*</span></p>
-										<input class="input" type="text" name="password"><br/>
+										<p class="formTitle" id="pword">Your password</p>
+										<input class="input" type="text" name="regpword"><br/>
 									</td></tr>
 									<tr class="atButton"><td>
 										<input class="submitButton" type="submit" value="Register">
@@ -76,18 +76,18 @@
 					<li>
 						<a href="#"><i class="fa fa-sign-in fa-lg"></i>  Login</a>
 						<div class="submenu">
-							<form name="input" action="#" method="get" onsubmit="formcheck()">
+							<form name="login" action="#" method="get" onsubmit="formcheck()">
 								<table  id="secondTab">
 									<tr>
 										<td colspan="2">
-											<p class="formTitle">Username<span class="needed">*</span></p>
-											<input class="input" type="text" name="firstName">
+											<p class="formTitle" id="user">Username</p>
+											<input class="input" type="text" name="user">
 										</td>
 									</tr>
 									<tr>
 										<td colspan="2">
-											<p class="formTitle">Password<span class="needed">*</span></p>
-											<input class="input" type="text" name="lastName">
+											<p class="formTitle" id="password">Password</p>
+											<input class="input" type="text" name="password">
 										</td>
 									</tr>
 									<tr>
