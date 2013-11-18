@@ -161,7 +161,7 @@ article {
 	background-color: #666666;
 }
 
-/* Sticky-Bar */
+/******************** Sticky-Bar ************************/
 
 .sticky_nav {
 	visibility: hidden;
@@ -197,8 +197,8 @@ ul#sticky_menu li :hover{
 ul#sticky_menu a {
 	color: white;
 	text-decoration: none;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 12px;
+	padding-bottom: 12px;
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -220,6 +220,18 @@ ul#sticky_menu li a:visited{
     z-index: 100;  
     border-top: 0;  
 } 
+
+/*******************************************************/
+
+
+
+/******************** Needed-Sign **********************/
+
+.needed {
+	color: red;
+}
+
+/*******************************************************/
 
 
 
@@ -293,7 +305,9 @@ ul#sticky_menu li a:visited{
 	text-align: right;
 }
 
-/* Dropdown */
+
+
+/*********************** Dropdown ************************/
 
 .submenu:after {
     clear: both;
@@ -343,6 +357,10 @@ nav ul li div{
 	-webkit-box-shadow: 0px 1px 1px 0px #cccccc;
 	box-shadow: 0px 1px 1px 0px #cccccc;	
 }
+
+
+/*****************************************************/
+
 
 
 .formTitle {

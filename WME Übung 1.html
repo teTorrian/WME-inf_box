@@ -17,6 +17,7 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
 
 		<script type="text/javascript" src="js/stickynav.js" ></script>
+		<script type="text/javascript" src="js/formvalidation.js" ></script>
 		
 	</head>
 	<body>
@@ -43,26 +44,26 @@
 					<li>
 						<a href="#"><i class="fa fa-star fa-lg"></i>  Register</a>
 						<div class="submenu">
-							<form  name="input" action="#" method="get">
+							<form  name="input" action="#" method="get" onsubmit="formcheck()">
 								<table>
 									<tr><td>
-										<p class="formTitle">First name</p>
+										<p class="formTitle">First name<span class="needed">*</span></p>
 										<input class="input" type="text" name="firstName">
 									</td></tr>
 									<tr><td>
-										<p class="formTitle">Last name</p>
+										<p class="formTitle">Last name<span class="needed">*</span></p>
 										<input class="input" type="text" name="lastName">
 									</td></tr>
 									<tr><td>
-										<p class="formTitle">Birthday</p>
+										<p class="formTitle">Birthday<span class="needed">*</span></p>
 										<input class="input" type="date" name="birthday">
 									</td></tr>
 									<tr><td>
-										<p class="formTitle">Your username</p>
+										<p class="formTitle">Your username<span class="needed">*</span></p>
 										<input class="input" type="text" name="username">
 									</td></tr>
 									<tr><td>
-										<p class="formTitle">Your password</p>
+										<p class="formTitle">Your password<span class="needed">*</span></p>
 										<input class="input" type="text" name="password"><br/>
 									</td></tr>
 									<tr class="atButton"><td>
@@ -75,17 +76,17 @@
 					<li>
 						<a href="#"><i class="fa fa-sign-in fa-lg"></i>  Login</a>
 						<div class="submenu">
-							<form name="input" action="#" method="get">
+							<form name="input" action="#" method="get" onsubmit="formcheck()">
 								<table  id="secondTab">
 									<tr>
 										<td colspan="2">
-											<p class="formTitle">Username</p>
+											<p class="formTitle">Username<span class="needed">*</span></p>
 											<input class="input" type="text" name="firstName">
 										</td>
 									</tr>
 									<tr>
 										<td colspan="2">
-											<p class="formTitle">Password</p>
+											<p class="formTitle">Password<span class="needed">*</span></p>
 											<input class="input" type="text" name="lastName">
 										</td>
 									</tr>
