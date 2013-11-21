@@ -11,6 +11,7 @@ h1 {
 	line-height: 140%;
 }
 
+
 #contentTable table {
 	margin-top: 15px;
 	width: 100%;
@@ -319,10 +320,12 @@ ul#sticky_menu li a:visited{
 }
 
 
+
+
 nav > ul > li {
     list-style: none;
     float: left;
-	
+
 	direction: rtl;
 }
 
@@ -335,13 +338,13 @@ nav ul li:hover > div {
 }
 
 nav ul li div{
-    /*display: inline;*/
     visibility: hidden;
     position: absolute;
 }
 
 
 .submenu {
+	
 	direction: ltr;
 	background: #fcfcfc;
 	border-left: 1px solid #cccccc;
@@ -353,31 +356,40 @@ nav ul li div{
 	border-spacing: 5px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
-	-moz-box-shadow: 0px 1px 1px 0px #cccccc;
-	-webkit-box-shadow: 0px 1px 1px 0px #cccccc;
-	box-shadow: 0px 1px 1px 0px #cccccc;	
+	-moz-box-shadow: 0px 2px 10px 0px #cccccc;
+	-webkit-box-shadow: 0px 2px 10px 0px #cccccc;
+	box-shadow: 0px 2px 10px 0px #cccccc;	
 }
 
 
-/*****************************************************/
+.frmtable {
+	width: 250px;
+	
+}
 
+.frmtable td {
+	padding: 10px 10px; 
+}
 
 
 .formTitle {
-	font-size: 10pt;
+	font-size: 12pt;
 	color: #cccccc;
 }
 
 
 .input {
-	width: 200px;
-	height: 25px;
+	width: 97%;
+	height: 30px;
+	font-size: 12pt;
+	color: grey;
 	background: #fafafa;
-	border: 1px solid grey;
+	border: 1px solid lightgrey;
 	border-bottom-left-radius: 3px;
 	border-bottom-right-radius: 3px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
+	padding: 3px;
 }
 
 #checkRemember {
@@ -391,7 +403,7 @@ nav ul li div{
 }
 
 
-/* Submit-Button */
+/******************** Submit-Button *********************/
 .submitButton{
 	margin-top: 15px;
 	-moz-box-shadow: 0px 0px 1px 0px #545454;
@@ -427,12 +439,12 @@ nav ul li div{
 	display:inline-block;
 	color:#f5f5f5;
 	font-family: 'Ubuntu', sans-serif;
-	font-size:14px;
+	font-size:18px;
 	font-weight:bold;
 	font-style:normal;
-	height:35px;
+	height:40px;
 	line-height:35px;
-	width:70px;
+	width:auto;
 	text-decoration:none;
 	text-align:center;
 }
@@ -455,5 +467,4 @@ nav ul li div{
 	top:1px;
 }
 
-
-
+/*****************************************************/
