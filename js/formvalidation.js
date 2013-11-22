@@ -110,7 +110,7 @@ function logincheck() {
 	if(jQuery.isEmptyObject( user ) || jQuery.isEmptyObject( password )) {
 		$("#lognotify").html(requieredalert);
 		
-	}else if(user != "admin" && password != "12345") {
+	}else if(user != "admin" || password != "12345") {
 		$("#lognotify").html(loginalert);
 	}
 	else
@@ -122,18 +122,21 @@ function logincheck() {
 		
 }
 
-/* Auswertung des Geburtsdatusms */
+/* Auswertung des Geburtsdatums */
 function bdaycheck(bdate) {
+	
+	/* Parsen vom HTML5-Date-Feld */
 	var check = bdate.split("-");
 	
+	/* Umwandeln der geparsten Daten in ein js-Date-Format */
 	check = new Date(check[0], check[1], check[2], now.getHours(), now.getMinutes(), now.getSeconds(), now.getMilliseconds());
 	
-	/*alert((year - check[0]) + "," + (month - check[1]) + "," + (day - check[2]));*/
-	
+	/* Zeiraum zw. eingegebenem Datum und dem jetzigen Zeitpunkt berechnen */
 	check = now - check;
+	
+	/* Millisekunden in Jahre umrechene */
 	check = (check / 1000) / 60 / 60 / 24 / 365;
 	
-	/*alert(check);*/
 	
 	if(check >= 17.93)
 		return true; 
