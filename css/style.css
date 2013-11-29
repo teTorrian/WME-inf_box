@@ -266,6 +266,8 @@ ul#sticky_menu li a:visited{
 
 #contentTable img {
 	margin-right: 12px;
+	height:50px;
+	width:50px;
 }
 
 .textline * {
@@ -468,3 +470,5 @@ nav ul li div{
 }
 
 /*****************************************************/
+
+

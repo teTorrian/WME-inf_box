@@ -119,12 +119,12 @@
 						</div>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-user fa-lg"></i>  maxmusti</a>
+						<a href="#" class="show-username"><i class="fa fa-user fa-lg"></i>  <!--maxmusti--></a>
 						<div class="submenu">
 							<table class="frmtable">
-								<tr><td><p class="formTitle">Your name:</p>Jane Doe</td></tr>
-								<tr><td><p class="formTitle">Your Email:</p>jane.doe@example.org</td></tr>
-								<tr><td><p class="formTitle">Your Quota (max/used):</p>2.5 GB / 7.0 GB</td></tr>
+								<tr><td class="show-username"><p class="formTitle">Your name:</p><!--Jane Doe--></td></tr>
+								<tr><td id="show-usermail"><p class="formTitle">Your Email:</p><!--jane.doe@example.org--></td></tr>
+								<tr><td id="show-quota"><p class="formTitle">Your Quota (max/used):</p><!--2.5 GB / 7.0 GB--></td></tr>
 								<tr><td class="atButton">
 									<input class="submitButton" type="submit" value="Logout">
 								</td></tr>									
@@ -186,7 +186,7 @@
 			
 
 				<article>
-					<table>
+					<table id="main-table">
 						<thead>
 							<tr>
 								<th>Filename
@@ -201,8 +201,8 @@
 							</tr>
 						</thead>
 						
-						<tbody>
-							<tr>
+						<tbody id="file_table">
+							<!--<tr>
 								<td>06 - BLUEMARC - BLUEMARC-BLUEMARC_-_AGA_LIFE_2013.mp3</td>
 								<td class="sizeColumn">6.3 MB</td>
 								<td class="typeColumn">Audio</td>
@@ -356,7 +356,7 @@
 									<a href="#"><i class="fa fa-lock fa-lg"></i></a>
 									<a href="#"><i class="fa  fa-trash-o fa-lg"></i></a>
 								</td>
-							</tr>
+							</tr>-->
 						</tbody>		
 					</table>
 				</article>
