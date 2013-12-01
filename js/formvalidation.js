@@ -1,5 +1,3 @@
-	
-		
 var need= "<span class=\"needed\"> *</span>";
 		
 var loginalert = "<span class=\"needed\">The given username or password id wrong! Please try again.</span>";
