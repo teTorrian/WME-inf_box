@@ -1,19 +1,14 @@
 
 var source = "http://wme.lehre.imld.de:8080/wme_13-14/api/";
-var user = 1;
-var useritems = new Array();
+var user = 2;
 
 
 
 $(document).ready(function() {
-
-	/*$.ajaxSetup( { "async": false } );*/
 		
 	getUser(user);
 	getUserItems(user);
 	
-	
-	/*$.ajaxSetup( { "async": true } );*/
 });
 	
 	
@@ -40,28 +35,18 @@ function getUserItems(userid) {
 	
 	jQuery.getJSON(itemSource, function(data) {
 		$.each( data, function( key, val ) {
-			useritems[i] = val.id;
+		
+		
+			$( "#file_table").append( "<tr class='entry-" + val.id + "'><td><a href='" + val.file_url + "' target='_blank'><img id='img-of-" + val.id + "' src='http://wme.lehre.imld.de:8080/wme_13-14/api/items/" + val.id + "/thumbnail'></a>" + val.filename + "</td><td id='size-of-" + val.id + "' class='sizeColumn'></td><td id='type-of-" + val.id + "' class='typeColumn'></td><td id='date-of-" + val.id + "' class='creationColumn'></td><td class='textline'><a href='#'><i class='fa fa-eye fa-lg'></i></a><a href='#'><i class='fa fa-share fa-lg'></i></a><p>|</p><a href='#'><i class='fa fa-pencil fa-lg'></i></a><a href='#'><i class='fa fa-lock fa-lg'></i></a><a href='#'><i class='fa  fa-trash-o fa-lg'></i></a></td></tr>" );						
 			
-			$( "#file_table").append( "<tr class='entry-" + val.id + "'><td><img src='" + val.file_url + "'>" + val.filename + "</td><td id='size-of-" + val.id + "' class='sizeColumn'></td><td id='type-of-" + val.id + "' class='typeColumn'></td><td id='date-of-" + val.id + "' class='creationColumn'></td><td class='textline'><a href='#'><i class='fa fa-eye fa-lg'></i></a><a href='#'><i class='fa fa-share fa-lg'></i></a><p>|</p><a href='#'><i class='fa fa-pencil fa-lg'></i></a><a href='#'><i class='fa fa-lock fa-lg'></i></a><a href='#'><i class='fa  fa-trash-o fa-lg'></i></a></td></tr>" );						
-
-			i++;
+			getItemMeta(val.id);
+			
 		});
-		insertItemMeta();
+		
 	});
 
 }
 
-
-
-function insertItemMeta() {
-
-	for(i = 0; i < useritems.length; i++) {
-	
-		getItemMeta(useritems[i]);
-	
-	}
-
-}
 
 
 
@@ -69,11 +54,14 @@ function getItemMeta(itemid) {
 
 	
 	var metadataSource = source + "items/" + itemid + "/metadata";
-	var sizeIdName = "#size-of-" + itemid;
 	
 	jQuery.getJSON(metadataSource, function(data) {
 		
-		$("#size-of-" + itemid).append(data.size);
+		if(data.thumbnail_available == false){
+			$("#img-of-" + itemid).attr('style', 'display:none');
+		}
+		
+		$("#size-of-" + itemid).append((data.size / 1024).toFixed(2) + " MB");
 		$("#type-of-" + itemid).append(data.mimetype);
 		$("#date-of-" + itemid).append(data.creation_date);
 		
@@ -82,12 +70,3 @@ function getItemMeta(itemid) {
 }
 
 
-
-function printItemIdArray() {
-	
-	$("body").append("printItemIdArray war hier! useritems.length: " + useritems.length + "<br>");
-	
-	for(i = 0; i < useritems.length; i++) {
-		$("body").append("I[" + i + "]: " + useritems[i] + "<br></br>");
-	}
-}

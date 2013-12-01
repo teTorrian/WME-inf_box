@@ -1,3 +1,5 @@
+
+
 body {
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 14px;
@@ -10,7 +12,6 @@ h1 {
 	font-size: 3em;
 	line-height: 140%;
 }
-
 
 #contentTable table {
 	margin-top: 15px;
@@ -40,6 +41,16 @@ h1 {
 	padding-top: 13px;
 	padding-bottom: 10px;
 }
+
+.fileColumn{width:600px;}
+
+.sizeColumn{width:100px;}
+
+.typeColumn{width:100px;}
+
+.creationColumn{width:200px;}
+
+.actionsColumn{width:170px;}
 
 article {
 	margin-bottom: 20px;
@@ -266,8 +277,7 @@ ul#sticky_menu li a:visited{
 
 #contentTable img {
 	margin-right: 12px;
-	height:50px;
-	width:50px;
+
 }
 
 .textline * {
