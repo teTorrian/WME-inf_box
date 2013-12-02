@@ -36,13 +36,12 @@ $(document).ready(function() {
 
 function getUser(userid) {
 	var userSource = source + "users/" + userid;
-	var divisor = 1024 * 1024;
 
 	jQuery.getJSON(userSource, function(data) {
 		
 		$(".show-username").append(data.username);
 		$("#show-usermail").append(data.email_address);
-		$("#show-quota").append(data.quota / divisor + " GB / " + (data.quota_used / divisor).toFixed(2) + " GB");
+		$("#show-quota").append(convertDataSize(data.quota) + " / " + convertDataSize(data.quota_used));
 		
 	});
 	
@@ -70,17 +69,28 @@ function getItemMeta(item) {
 	var metadataSource = source + "items/" + item.id + "/metadata";
 	
 	jQuery.getJSON(metadataSource, function(data) {
+		var date = new Date(data.creation_date);
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+		var hour = date.getHours();
+		var minute = date.getMinutes();
+	
 		item.size = data.size;
-		item.type = data.mimetype;
-		item.creation_date = data.creation_date;
+		item.creation_date = (day<10 ? '0' : '') + day + '.' + (month<10 ? '0' : '') + month + '.' + year + ' ' + (hour<10 ? '0' : '') + hour + ':' + (minute<10 ? '0' : '') + minute;
+		
+		if (data.mimetype == 'image/jpeg')
+			item.type = 'Bild';
+		else if (data.mimetype == 'txt/plain')
+			item.type = 'Text';
 		
 		if(data.thumbnail_available == false){
-			$("#img-of-" + itemid).attr('style', 'display:none');
+			$("#img-of-" + item.id).attr('style', 'display:none');
 		}
 		
-		$("#size-of-" + item.id).append(convertDataSize(data.size));
-		$("#type-of-" + item.id).append(data.mimetype);
-		$("#date-of-" + item.id).append(data.creation_date);
+		$("#size-of-" + item.id).append(convertDataSize(item.size));
+		$("#type-of-" + item.id).append(item.type);
+		$("#date-of-" + item.id).append(item.creation_date);
 		
 	});
 }
@@ -94,18 +104,20 @@ function convertDataSize(byteSize) {
 	{
 		size /= 1024;
 		unit = 'KB';
+		
+		if (size > 1024)
+		{
+			size /= 1024;
+			unit = 'MB';
+			
+			if (size > 1024)
+			{
+				size /= 1024;
+				unit = 'GB';
+			}
+		}
 	} 
-	else if (size > 1024)
-	{
-		size /= 1024;
-		unit = 'MB';
-	} 
-	else if (size > 1024)
-	{
-		size /= 1024;
-		unit = 'GB';
-	}
-	return size.toFixed(1) + ' ' + unit;
+	return size.toFixed(0) + ' ' + unit;
 }
 
 function sortItemsByAttribute(sortAttribute, sortAlgorithmCallback, ascending)
