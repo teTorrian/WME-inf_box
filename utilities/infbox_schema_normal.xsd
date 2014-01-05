@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:simpleType name="email"> 
+		<xsd:restriction base="xsd:string"> 
+			<xsd:pattern value="[^@]+@[^\.]+\..+"/> 
+		</xsd:restriction> 
+	</xsd:simpleType> 
+
+	<xs:complexType name="user">
+		<xs:all>
+			<xs:element name="id" 				type="xs:nonNegativeInteger"/>
+			<xs:element name="username" 		type="xs:string"/>
+			<xs:element name="display_name" 	type="xs:string"/>
+			<xs:element name="birthday" 		type="xs:string"/>
+			<xs:element name="email_address" 	type="email"/>
+			<xs:element name="quota" 			type="xs:long"/>
+			<xs:element name="quota_used" 		type="xs:long"/>
+			<xs:element ref="items"/>
+		</xs:all>
+	</xs:complexType>
+
+	<xs:complexType name="item">
+		<xs:all>
+			<xs:element name="id" 				type="xs:nonNegativeInteger"/>
+			<xs:element name="filename" 		type="xs:string"/>
+			<xs:element name="file_url" 		type="xs:string"/>
+		</xs:all>
+	</xs:complexType>
+	
+	<xs:complexType name="users">
+		<xs:sequence>
+			<xs:element ref="user" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="items">
+		<xs:sequence>
+			<xs:element ref="item" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
